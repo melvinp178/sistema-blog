@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "publicaciones",uniqueConstraints = {@UniqueConstraint(columnNames = {"titulo"})})
-public class Publicacion {
+public class PublicacionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,11 +51,11 @@ public class Publicacion {
         this.contenido = contenido;
     }
 
-    public Publicacion(){
+    public PublicacionEntity(){
         super();
     }
 
-    public Publicacion(Long id, String titulo, String descripcion, String contenido) {
+    public PublicacionEntity(Long id, String titulo, String descripcion, String contenido) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
